@@ -2,7 +2,7 @@
 #include<fstream>
 
 #include "usuarios.h"
-#include "vendedores.h"
+#include "peliculas.h"
 #include "bitacora.h"
 #include "aplicaciones.h"
 using namespace std;
@@ -11,8 +11,10 @@ void catalogos();
 void reportes();
 void menuGeneral();
 usuarios usuarioRegistrado;
+peliculas pelis;
 int main()
 {
+
     bool accesoUsuarios;
     //creditosModulo();
 
@@ -33,15 +35,13 @@ void menuGeneral(){
 	system("cls");
 	cout<<"\t\t\t\t\tUsuario: "<< usuarioRegistrado.getNombre() <<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\t |   SISTEMA GESTION DE VENTAS  |"<<endl;
+	cout<<"\t\t\t |   JOSUE VILLAGRAN - 17319  |"<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"\t\t\t 1. Catalogos"<<endl;
-	cout<<"\t\t\t 2. Procesos"<<endl;
-	cout<<"\t\t\t 3. Reportes"<<endl;
-	cout<<"\t\t\t 4. Ayuda"<<endl;
-	cout<<"\t\t\t 5. Salir del Sistema"<<endl;
+	cout<<"\t\t\t 2. Informes"<<endl;
+	cout<<"\t\t\t 3. Salir del Sistema"<<endl;
 		cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2/3/4/5]"<<endl;
+	cout<<"\t\t\tOpcion a escoger:[1/2/3]"<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"\t\t\tIngresa tu Opcion: ";
     cin>>choice;
@@ -57,22 +57,15 @@ void menuGeneral(){
 		}while(x=='y'||x=='Y');*/
 		break;
 	case 2:
-		//display();
-		break;
-	case 3:
-		//modify();
 		reportes();
 		break;
-	case 4:
-		//search();
+	case 3:
 		break;
-	case 5:
-    	break;
 	default:
 		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
 		cin.get();
 	}
-    }while(choice!= 5);
+    }while(choice!= 3);
 }
 void catalogos(){
     int choice;
@@ -83,6 +76,7 @@ void catalogos(){
 	cout<<"\t\t\t |   SISTEMA CRUD - Catalogos              |"<<endl;
 	cout<<"\t\t\t--------------------------------------------"<<endl;
 	cout<<"\t\t\t 1. Peliculas"<<endl;
+	cout<<"\t\t\t 2. Usuarios"<<endl;
 	cout<<"\t\t\t 3. Retornar menu anterior"<<endl;
     cout<<"\t\t\t--------------------------------------------"<<endl;
 	cout<<"\t\t\tOpcion a escoger:[1/2]"<<endl;
@@ -93,37 +87,23 @@ void catalogos(){
     switch(choice)
     {
     case 1:
-    	/*do
-    	{
-    		catalogos();
-    		cout<<"\n\t\t\t Agrega otra persona(Y,N): ";
-    		cin>>x;
-		}while(x=='y'||x=='Y');*/
+        {
+            pelis.menu();
+		}
 		break;
 	case 2:
-		//display();
-		{
-            vendedores vendedor;
-            vendedor.menu();
+        {
+           // usuario user;
+            //user.menu();
 		}
 		break;
 	case 3:
-		//modify();
-		break;
-	case 4:
-        {
-            aplicaciones aplicacion;
-            aplicacion.menu();
-		}
-		//search();
-		break;
-	case 5:
 		break;
 	default:
 		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
 		cin.get();
 	}
-    }while(choice!= 5);
+    }while(choice!= 3);
 }
 void reportes(){
     int choice;
@@ -131,14 +111,12 @@ void reportes(){
     do {
 	system("cls");
 	cout<<"\t\t\t--------------------------------------------"<<endl;
-	cout<<"\t\t\t |   SISTEMA GESTION DE VENTAS - Reportes   |"<<endl;
+	cout<<"\t\t\t |   SISTEMA CRUD - Informes               |"<<endl;
 	cout<<"\t\t\t--------------------------------------------"<<endl;
-	cout<<"\t\t\t 1. Clientes"<<endl;
-	cout<<"\t\t\t 2. Vendedores"<<endl;
-	cout<<"\t\t\t 3. Cobradores"<<endl;
-	cout<<"\t\t\t 4. Conceptos"<<endl;
-	cout<<"\t\t\t 5. Bitacora"<<endl;
-	cout<<"\t\t\t 6. Retornar menu anterior"<<endl;
+	cout<<"\t\t\t 1. Peliculas"<<endl;
+	cout<<"\t\t\t 2. Login"<<endl;
+	cout<<"\t\t\t 3. Bitacora"<<endl;
+	cout<<"\t\t\t 4. Retornar menu anterior"<<endl;
     cout<<"\t\t\t--------------------------------------------"<<endl;
 	cout<<"\t\t\tOpcion a escoger:[1/2/3/4/5/6]"<<endl;
 	cout<<"\t\t\t--------------------------------------------"<<endl;
@@ -148,12 +126,9 @@ void reportes(){
     switch(choice)
     {
     case 1:
-    	/*do
     	{
-    		catalogos();
-    		cout<<"\n\t\t\t Agrega otra persona(Y,N): ";
-    		cin>>x;
-		}while(x=='y'||x=='Y');*/
+    	    pelis.desplegar();
+    	}
 		break;
 	case 2:
 		//display();
@@ -164,39 +139,10 @@ void reportes(){
 	case 4:
 		//search();
 		break;
-	case 5:
-		//display();
-		{
-            bitacora auditoria;
-            auditoria.menu();
-		}
-		break;
-	case 6:
-		break;
 	default:
 		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
 		cin.get();
 	}
-    }while(choice!= 6);
+    }while(choice!= 4);
 }
-void creditosModulo(){
-string line;
-    //char userInput = ' ';
-    ifstream myFile("modulo.txt");
-    if(myFile.is_open())
-    {
-        //Se obtiene el mapa externo y se general el mapa de celdas
-        while( getline(myFile, line))
-        {
-            cout << line << endl;
-        }
-        myFile.close();
-        cout<<"Presione cualquier tecla para continuar";
-        cin.get();
-    }
-    else
-    {
-        cout << "Error FATAL: el archivo de modulo no pudo ser cargado" << endl;
-        cin.get();
-    }
-}
+
