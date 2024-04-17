@@ -12,6 +12,7 @@ void reportes();
 void menuGeneral();
 usuarios usuarioRegistrado;
 peliculas pelis;
+bitacora bit;
 int main()
 {
 
@@ -76,8 +77,7 @@ void catalogos(){
 	cout<<"\t\t\t |   SISTEMA CRUD - Catalogos              |"<<endl;
 	cout<<"\t\t\t--------------------------------------------"<<endl;
 	cout<<"\t\t\t 1. Peliculas"<<endl;
-	cout<<"\t\t\t 2. Usuarios"<<endl;
-	cout<<"\t\t\t 3. Retornar menu anterior"<<endl;
+	cout<<"\t\t\t 2. Retornar menu anterior"<<endl;
     cout<<"\t\t\t--------------------------------------------"<<endl;
 	cout<<"\t\t\tOpcion a escoger:[1/2]"<<endl;
 	cout<<"\t\t\t--------------------------------------------"<<endl;
@@ -91,19 +91,13 @@ void catalogos(){
             pelis.menu();
 		}
 		break;
-	case 2:
-        {
-           // usuario user;
-            //user.menu();
-		}
-		break;
-	case 3:
+	case 2 :
 		break;
 	default:
 		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
 		cin.get();
 	}
-    }while(choice!= 3);
+    }while(choice!= 2);
 }
 void reportes(){
     int choice;
@@ -114,9 +108,8 @@ void reportes(){
 	cout<<"\t\t\t |   SISTEMA CRUD - Informes               |"<<endl;
 	cout<<"\t\t\t--------------------------------------------"<<endl;
 	cout<<"\t\t\t 1. Peliculas"<<endl;
-	cout<<"\t\t\t 2. Login"<<endl;
-	cout<<"\t\t\t 3. Bitacora"<<endl;
-	cout<<"\t\t\t 4. Retornar menu anterior"<<endl;
+	cout<<"\t\t\t 2. Bitacora"<<endl;
+	cout<<"\t\t\t 3. Retornar menu anterior"<<endl;
     cout<<"\t\t\t--------------------------------------------"<<endl;
 	cout<<"\t\t\tOpcion a escoger:[1/2/3/4/5/6]"<<endl;
 	cout<<"\t\t\t--------------------------------------------"<<endl;
@@ -131,18 +124,15 @@ void reportes(){
     	}
 		break;
 	case 2:
-		//display();
+            bit.desplegar();
 		break;
 	case 3:
 		//modify();
-		break;
-	case 4:
-		//search();
 		break;
 	default:
 		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
 		cin.get();
 	}
-    }while(choice!= 4);
+    }while(choice!= 3);
 }
 

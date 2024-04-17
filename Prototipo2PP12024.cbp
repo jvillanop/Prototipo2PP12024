@@ -34,9 +34,15 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Core.h" />
+		<Unit filename="include/aplicaciones.h" />
+		<Unit filename="include/bitacora.h" />
+		<Unit filename="include/peliculas.h" />
+		<Unit filename="include/usuarios.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Core.cpp" />
+		<Unit filename="src/aplicaciones.cpp" />
+		<Unit filename="src/bitacora.cpp" />
+		<Unit filename="src/peliculas.cpp" />
+		<Unit filename="src/usuarios.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

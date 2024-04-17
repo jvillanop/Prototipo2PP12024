@@ -1,0 +1,60 @@
+# depslib dependency file v1.0
+1713373910 source:c:\users\bdg.josue.villagran\documents\umg\parcial 2\prototipo2pp12024\main.cpp
+	<iostream>
+	<fstream>
+	"usuarios.h"
+	"peliculas.h"
+	"bitacora.h"
+	"aplicaciones.h"
+
+1713370310 c:\users\bdg.josue.villagran\documents\umg\parcial 2\prototipo2pp12024\include\usuarios.h
+	<iostream>
+
+1713370714 c:\users\bdg.josue.villagran\documents\umg\parcial 2\prototipo2pp12024\include\peliculas.h
+	<iostream>
+
+1713370310 c:\users\bdg.josue.villagran\documents\umg\parcial 2\prototipo2pp12024\include\bitacora.h
+	<iostream>
+
+1713370310 c:\users\bdg.josue.villagran\documents\umg\parcial 2\prototipo2pp12024\include\aplicaciones.h
+	<iostream>
+
+1713370310 source:c:\users\bdg.josue.villagran\documents\umg\parcial 2\prototipo2pp12024\src\aplicaciones.cpp
+	"aplicaciones.h"
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"usuarios.h"
+
+1713370310 source:c:\users\bdg.josue.villagran\documents\umg\parcial 2\prototipo2pp12024\src\bitacora.cpp
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713373174 source:c:\users\bdg.josue.villagran\documents\umg\parcial 2\prototipo2pp12024\src\peliculas.cpp
+	"peliculas.h"
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"usuarios.h"
+
+1713374270 source:c:\users\bdg.josue.villagran\documents\umg\parcial 2\prototipo2pp12024\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+	"bitacora.h"
+
