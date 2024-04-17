@@ -123,8 +123,9 @@ void reportes(){
     	    pelis.desplegar();
     	}
 		break;
-	case 2:
+	case 2:{
             bit.desplegar();
+	}
 		break;
 	case 3:
 		//modify();
