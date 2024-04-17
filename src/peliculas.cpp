@@ -139,7 +139,7 @@ void peliculas::modificar()
 	fstream file,file1;
 	string participant_id;
 	int found=0;
-	cout<<"\n-------------------------Modificacion Detalles Vendedor-------------------------"<<endl;
+	cout<<"\n-------------------------Modificacion Detalles Pelicula-------------------------"<<endl;
 	file.open("peliculas.txt",ios::in);
 	if(!file)
 	{
@@ -204,15 +204,15 @@ void peliculas::buscar()
 	file.open("peliculas.txt",ios::in);
 	if(!file)
 	{
-		cout<<"\n-------------------------Datos del vendedor buscado------------------------"<<endl;
+		cout<<"\n-------------------------Datos de la pelicula buscada------------------------"<<endl;
 		cout<<"\n\t\t\tNo hay informacion..."<< endl;
 		system("pause");
 	}
 	else
 	{
 		string participant_id;
-		cout<<"\n-------------------------Datos del vendedor buscado------------------------"<<endl;
-		cout<<"\nIngrese Id del vendedor que quiere buscar: ";
+		cout<<"\n-------------------------Datos del pelicula buscada------------------------"<<endl;
+		cout<<"\nIngrese Id de la pelicula que quiere buscar: ";
 		cin>>participant_id;
 		file >> id >> nombre >> clasificacion >> genero >> subtitulado >> idioma >> precio ;
 		while(!file.eof())
@@ -245,7 +245,7 @@ void peliculas::borrar()
 	fstream file,file1;
 	string participant_id;
 	int found=0;
-	cout<<"\n-------------------------Detalles Vendedor a Borrar-------------------------"<<endl;
+	cout<<"\n-------------------------Detalles Pelicula a Borrar-------------------------"<<endl;
 	file.open("peliculas.txt",ios::in);
 	if(!file)
 	{
